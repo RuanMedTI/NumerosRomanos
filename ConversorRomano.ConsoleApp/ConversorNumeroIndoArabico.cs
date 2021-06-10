@@ -27,7 +27,7 @@ namespace ConversorRomano.ConsoleApp
                 i++;
 
                 if (Resultado == "IIII" || Resultado == "XXXX" || Resultado == "CCCC" || Resultado == "MMMM")
-                    Resultado = "Com exceção de V, L e D, os outros numerais podem se repetir no máximo três vezes";
+                    Console.WriteLine("Com exceção de V, L e D, os outros numerais podem se repetir no máximo três vezes");
 
             }
             return Resultado;
