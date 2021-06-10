@@ -8,35 +8,43 @@ namespace ConversorRomano.ConsoleApp
 {
     class ConverterNumeroRomano
     {
-        /*string numeroRomanoVar = "I";
-
-        public ConverterNumeroRomano()
+        public int ConverterNumeroRomanoSecundario()
         {
-            string[] Valores = { "X̄", "ĪX̄", "V̄ĪĪĪ", "V̄ĪĪ", "V̄Ī", "V̄", "ĪV̄", "MMM", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-            int[] Arabicos = { 10000, 9000, 8000, 7000, 6000, 5000, 4000, 3000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+            char[] romano = {'m'}; 
 
+            Dictionary<char, short> numeraisRomanos = new Dictionary<char, short>();
+            numeraisRomanos.Add('M', 1000);
+            numeraisRomanos.Add('C', 100);
+            numeraisRomanos.Add('L', 50);
+            numeraisRomanos.Add('X', 10);
+            numeraisRomanos.Add('V', 5);
+            numeraisRomanos.Add('I', 1);
+            numeraisRomanos.Add('m', 1000);
+            numeraisRomanos.Add('c', 100);
+            numeraisRomanos.Add('l', 50);
+            numeraisRomanos.Add('x', 10);
+            numeraisRomanos.Add('v', 5);
+            numeraisRomanos.Add('i', 1);
 
-            string NumeroNormal = numeroRomanoVar;
-            string Resultado = "";
-            int i = 0;
-            while (NumeroNormal > "I")
+            int arabico = 0;
+
+            for (int i = 0; i < romano.Count(); i++)
             {
-                while (NumeroNormal >= Arabicos[i])
+                
+                if (!numeraisRomanos.ContainsKey(romano[i]))
+                    return 0;
+
+                if (i == romano.Count() - 1)
                 {
-                    Resultado = Resultado + Valores[i];
-                    NumeroNormal = NumeroNormal - Arabicos[i];
+                    arabico += numeraisRomanos[romano[i]];
                 }
-                i++;
-
-                if (Resultado == "IIII" || Resultado == "XXXX" || Resultado == "CCCC" || Resultado == "MMMM")
-                    Resultado = "Com exceção de V, L e D, os outros numerais podem se repetir no máximo três vezes";
-
+                else
+                {
+                    if (numeraisRomanos[romano[i + 1]] > numeraisRomanos[romano[i]]) arabico -= numeraisRomanos[romano[i]];
+                    else arabico += numeraisRomanos[romano[i]];
+                }
             }
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" " + Resultado);
-            Console.ResetColor();*/
-
+            return arabico;
         }
     }
-
+}
