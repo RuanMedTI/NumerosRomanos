@@ -9,6 +9,8 @@ namespace ConversorRomano.Test
     {
         ConversorNumeroIndoArabico conversor = new ConversorNumeroIndoArabico();
 
+        ConverterNumeroRomano conversor2 = new ConverterNumeroRomano();
+
         [TestMethod]
         public void Retornar_I()
         {
@@ -86,5 +88,6 @@ namespace ConversorRomano.Test
         {
             Assert.AreEqual("M", conversor.ConversorNumeroIndoArabicoPrimario(1000));
         }
+
     }
 }

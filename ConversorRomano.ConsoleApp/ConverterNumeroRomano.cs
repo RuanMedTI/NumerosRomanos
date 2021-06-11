@@ -6,25 +6,34 @@ using System.Threading.Tasks;
 
 namespace ConversorRomano.ConsoleApp
 {
-    class ConverterNumeroRomano
+    public class ConverterNumeroRomano
     {
+        
         public int ConverterNumeroRomanoSecundario()
         {
-            char[] romano = {'m'}; 
 
-            Dictionary<char, short> numeraisRomanos = new Dictionary<char, short>();
-            numeraisRomanos.Add('M', 1000);
-            numeraisRomanos.Add('C', 100);
-            numeraisRomanos.Add('L', 50);
-            numeraisRomanos.Add('X', 10);
-            numeraisRomanos.Add('V', 5);
-            numeraisRomanos.Add('I', 1);
-            numeraisRomanos.Add('m', 1000);
-            numeraisRomanos.Add('c', 100);
-            numeraisRomanos.Add('l', 50);
-            numeraisRomanos.Add('x', 10);
-            numeraisRomanos.Add('v', 5);
-            numeraisRomanos.Add('i', 1);
+            string[] romano = { "V̄ĪĪ" }; 
+
+            Dictionary<string, int > numeraisRomanos = new Dictionary<string, int>();
+
+            numeraisRomanos.Add("X̄", 10000);
+            numeraisRomanos.Add("ĪX̄", 9000);
+            numeraisRomanos.Add("V̄ĪĪĪ", 8000);
+            numeraisRomanos.Add("V̄ĪĪ", 7000);
+            numeraisRomanos.Add("V̄Ī", 6000);
+            numeraisRomanos.Add("V̄", 5000);
+            numeraisRomanos.Add("M", 1000);
+            numeraisRomanos.Add("C", 100);
+            numeraisRomanos.Add("L", 50);
+            numeraisRomanos.Add("X", 10);
+            numeraisRomanos.Add("V", 5);
+            numeraisRomanos.Add("I", 1);
+            numeraisRomanos.Add("m", 1000);
+            numeraisRomanos.Add("c", 100);
+            numeraisRomanos.Add("l", 50);
+            numeraisRomanos.Add("x", 10);
+            numeraisRomanos.Add("v", 5);
+            numeraisRomanos.Add("i", 1);
 
             int arabico = 0;
 
