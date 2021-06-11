@@ -14,7 +14,7 @@ namespace ConversorRomano.ConsoleApp
 
             ConversorNumeroIndoArabico conversorIndoArabico = new ConversorNumeroIndoArabico();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(conversorIndoArabico.ConversorNumeroIndoArabicoPrimario(7000));
+            Console.WriteLine(conversorIndoArabico.ConversorNumeroIndoArabicoPrimario(10));
             Console.ResetColor();
 
             ConverterNumeroRomano conversorRomano = new ConverterNumeroRomano();

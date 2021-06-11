@@ -9,8 +9,6 @@ namespace ConversorRomano.Test
     {
         ConversorNumeroIndoArabico conversor = new ConversorNumeroIndoArabico();
 
-        ConverterNumeroRomano conversor2 = new ConverterNumeroRomano();
-
         [TestMethod]
         public void Retornar_I()
         {
